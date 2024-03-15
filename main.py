@@ -9,9 +9,7 @@ turtle.shape(image)
 
 data = pandas.read_csv("50_states.csv")
 all_states = data.state.to_list()
-print(all_states)
 correct_answer = []
-end_of_game = True
 while len(correct_answer) < 50:
     answer_state = screen.textinput(title=f"{len(correct_answer)}/50 States Correct",
                                     prompt="What's another state's name?")
@@ -34,11 +32,3 @@ while len(correct_answer) < 50:
         t.penup()
         t.goto(x, y)
         t.write(f"{title_answer}")
-
-# states_to_learn.csv
-# set_states = set(all_states)
-# set_answers = (set(correct_answer))
-# states_to_learn = list(set_states.difference(set_answers))
-# df = pandas.DataFrame({"state_name": states_to_learn})
-# df.to_csv("states_to_learn.csv")
-# print(states_to_learn)
